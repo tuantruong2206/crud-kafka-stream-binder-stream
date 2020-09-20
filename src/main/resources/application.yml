@@ -1,0 +1,26 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          applicationId: hello-word-count-sample-2
+          configuration:
+            commit.interval.ms: 100
+            default:
+              key.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+              value.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+          brokers: localhost:9092
+      bindings:
+        process-in-0:
+          destination: words
+        process-out-0:
+          destination: counts
+        greetings-in:
+          destination: greetings
+          contentType: application/json
+        greetings-out:
+          destination: greetings
+          contentType: application/json
+
+server:
+  port: 8098
