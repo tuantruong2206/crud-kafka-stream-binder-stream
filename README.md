@@ -8,6 +8,9 @@ bin/kafka-server-start.sh config/server.properties
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic counts --from-beginning
 bin/kafka-console-producer.sh --broker-list localhost:9092 --topic words
 
+source code
+https://github.com/confluentinc/kafka-streams-examples/tree/4.0.0-post/src/main/java/io/confluent/examples/streams/microservices
+
 ### Reference Documentation
 For further reference, please consider the following sections:
 
